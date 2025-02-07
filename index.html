@@ -4,25 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
+      <img src="img/logo.png" />
       <header>
         <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+          <div class="search-structure">
+            <input
+              type="search"
+              class="search-city"
+              placeholder="Enter a city..."
+              required
+            />
+            <input type="submit" class="search-button" value="Search" />
+          </div>
         </form>
       </header>
-      <div class="weather-info">
-        <h1>Paris</h1>
-        <p>
-          Saturday 15:32, moderate rain<br />
-          Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-        </p>
-      </div>
-      <div>☀️14°C</div>
+      <main class="weather-info">
+        <div class="actual-info">
+          <h1>Paris</h1>
+          <p>
+            Saturday 15:32, moderate rain<br />
+            Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+          </p>
 
-      <main class="week-info">
+          <div class="temperature">☀️14°C</div>
+        </div>
+
         <ul>
           <li>
             Sun🌤️
@@ -46,6 +56,7 @@
           </li>
         </ul>
       </main>
+
       <footer>
         This project was coded by <a href="">Ana Chicaiza</a> and is on
         <a href="">Github</a> and hosted on <a href="">Netlify</a>
