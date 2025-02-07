@@ -15,8 +15,8 @@ body {
 
 header {
   margin: 30px 0;
-  display: flex;
-  justify-content: space-around;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
 }
 
 img {
@@ -33,23 +33,76 @@ input {
   border-radius: 6px;
 }
 
-.search-city {
+.search-input {
   background: #f9f7fe;
-  border: 1px solid #f9f7fe;
-  width: 550px;
+  border: none;
+  width: 80%;
   padding: 20px;
+  font-size: 16px;
+  color: rgba(39, 66, 33, 0.04);
 }
 
 .search-button {
   margin-left: 5px;
   background: #885df1;
+  font-size: 16px;
   color: white;
-  border: 1px solid #885df1;
-  width: 145px;
+  line-height: 1;
+  border: none;
+  width: 15%;
   padding: 20px;
+  margin-left: 5px;
 }
 
-.actual-info {
+main {
+  padding: 30px 0;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  position: relative;
+  top: -5px;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.value {
+  font-size: 80px;
+  font-weight: bold;
+}
+.unit {
+  font-size: 28px;
+  position: relative;
+  top: -38px;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.current-weather {
+  color: #27214266;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.current-details strong {
+  color: #f65282;
+}
+
+ul {
+  margin: 40px 10px;
+}
+
+li {
+  list-style: none;
+}
+.forecast {
   display: flex;
   justify-content: space-around;
 }
