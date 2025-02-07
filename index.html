@@ -14,7 +14,7 @@
           <div class="search-structure">
             <input
               type="search"
-              class="search-city"
+              class="search-input"
               placeholder="Enter a city..."
               required
             />
@@ -23,37 +23,44 @@
         </form>
       </header>
       <main class="weather-info">
-        <div class="actual-info">
-          <h1>Paris</h1>
-          <p>
-            Saturday 15:32, moderate rain<br />
-            Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-          </p>
+        <div class="details">
+          <div class="current-details">
+            <h1>Paris</h1>
+            <p class="current-weather">
+              Saturday 15:32, moderate rain<br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
 
-          <div class="temperature">☀️14°C</div>
+          <div class="temperature">
+            <span class="icon">☀️</span><span class="value">14</span
+            ><span class="unit">°C</span>
+          </div>
         </div>
 
         <ul>
-          <li>
-            Sun🌤️
-            <p><strong>14°C</strong>-18°C</p>
-          </li>
-          <li>
-            Mon🌤️
-            <p><strong>14°C</strong>-18°C</p>
-          </li>
-          <li>
-            Tue🌤️
-            <p><strong>14°C</strong>-18°C</p>
-          </li>
-          <li>
-            Wed🌤️
-            <p><strong>14°C</strong>-18°C</p>
-          </li>
-          <li>
-            Thu🌤️
-            <p><strong>14°C</strong>-18°C</p>
-          </li>
+          <div class="forecast">
+            <li>
+              Sun🌤️
+              <p><strong>14°C</strong>-18°C</p>
+            </li>
+            <li>
+              Mon🌤️
+              <p><strong>14°C</strong>-18°C</p>
+            </li>
+            <li>
+              Tue🌤️
+              <p><strong>14°C</strong>-18°C</p>
+            </li>
+            <li>
+              Wed🌤️
+              <p><strong>14°C</strong>-18°C</p>
+            </li>
+            <li>
+              Thu🌤️
+              <p><strong>14°C</strong>-18°C</p>
+            </li>
+          </div>
         </ul>
       </main>
 
