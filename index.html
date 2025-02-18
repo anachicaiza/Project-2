@@ -10,11 +10,12 @@
     <div class="container">
       <img src="img/logo.png" />
       <header>
-        <form>
+        <form id="city-form">
           <div class="search-structure">
             <input
               type="search"
               class="search-input"
+              id="search-input"
               placeholder="Enter a city..."
               required
             />
@@ -25,7 +26,7 @@
       <main class="weather-info">
         <div class="details">
           <div class="current-details">
-            <h1>Paris</h1>
+            <h1 id="main-title">Paris</h1>
             <p class="current-weather">
               Saturday 15:32, moderate rain<br />
               Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
@@ -63,7 +64,7 @@
           </div>
         </ul>
       </main>
-
+      <script src="src/index.js"></script>
       <footer>
         This project was coded by <a href="">Ana Chicaiza</a> and is on
         <a href="">Github</a> and hosted on <a href="">Netlify</a>
