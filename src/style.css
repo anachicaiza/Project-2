@@ -39,7 +39,7 @@ input {
   width: 80%;
   padding: 20px;
   font-size: 16px;
-  color: rgba(39, 66, 33, 0.04);
+  color: rgba(39, 66, 33, 0.5);
 }
 
 .search-button {
