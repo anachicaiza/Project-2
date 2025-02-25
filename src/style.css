@@ -97,18 +97,6 @@ h1 {
   color: #f65282;
 }
 
-ul {
-  margin: 40px 10px;
-}
-
-li {
-  list-style: none;
-}
-.forecast {
-  display: flex;
-  justify-content: space-around;
-}
-
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
