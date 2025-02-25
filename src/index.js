@@ -1,22 +1,33 @@
 function showTemperature(response) {
   let valueTemperatureElement = document.querySelector("#value");
-  let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#main-title");
   let descriptionElement = document.querySelector("#description");
-  let description = response.data.condition.description;
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+  let icon = `<img src="${response.data.condition.icon_url}" class="icon" />`;
+
+  valueTemperatureElement.innerHTML = Math.round(
+    response.data.temperature.current
+  );
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = description;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  windElement.innerHTML = response.data.wind.speed;
+  iconElement.innerHTML = icon;
   console.log(response);
-  valueTemperatureElement.innerHTML = temperature;
+}
+
+function SearchCity(city) {
+  let apiKey = "b739b64actfb7710ab2aa8f6044o4c38";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(showTemperature);
 }
 
 function city(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-  let city = searchInput.value;
-  let apiKey = "b739b64actfb7710ab2aa8f6044o4c38";
-  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiURL).then(showTemperature);
+  SearchCity(searchInput.value);
 }
 
 function formatDate(date) {
@@ -48,6 +59,8 @@ function formatDate(date) {
 
 let searchElement = document.querySelector("#city-form");
 searchElement.addEventListener("submit", city);
+
+SearchCity("Paris");
 
 let currentDateElement = document.querySelector("#current-date");
 let currentDate = new Date();

@@ -27,18 +27,20 @@
       <main class="weather-info">
         <div class="details">
           <div class="current-details">
-            <h1 id="main-title">Paris</h1>
+            <h1 id="main-title"></h1>
             <p class="current-weather">
               <span id="current-date"></span>,
-              <span id="description">moderate rain</span>
+              <span id="description"></span>
               <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+              Humidity:<strong> <span id="humidity">87</span>%</strong>, Wind:
+              <strong><span id="wind">7.2</span>km/h</strong>
             </p>
           </div>
 
           <div class="temperature">
-            <span class="icon">☀️</span><span class="value" id="value"></span
-            ><span class="unit">°C</span>
+            <div id="icon" class="icon">☀️</div>
+            <div class="value" id="value"></div>
+            <div class="unit">°C</div>
           </div>
         </div>
 
