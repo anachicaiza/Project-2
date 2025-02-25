@@ -15,7 +15,6 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
   iconElement.innerHTML = icon;
-  console.log(response);
 }
 
 function SearchCity(city) {
